@@ -1,5 +1,11 @@
 //Plugin that enables Java functionality
 apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+//declaring the class containing the main method
+//in this case, it's the HelloWorld class wihtin the hello package
+mainClassName = 'hello.HelloWorld'
 
 //repository block to add source for 3rd party libraries
 repositories{
