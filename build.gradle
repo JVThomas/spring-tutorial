@@ -1,0 +1,25 @@
+//Plugin that enables Java functionality
+apply plugin: 'java'
+
+//repository block to add source for 3rd party libraries
+repositories{
+	//loading mavenCentral since Gradle leans heavily on Maven conventions
+	//this includes MavenCentral as a source of library dependencies
+	mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+//dependencies block, signifies libraries required
+//compile designation indicates libraries needed at compile time
+dependencies{
+	compile "joda-time:joda-time:2.2"
+	testCompile "junit:junit:4.12"
+}
+
+//jar block specifies how the JAR(Java Archive) will be named
+jar{
+	baseName = 'gs-gradle'
+	version = '0.1.0'
+}
